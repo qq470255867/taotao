@@ -3,8 +3,6 @@ package com.taotao.service;
 import java.util.Date;
 import java.util.List;
 
-import javax.naming.spi.DirStateFactory.Result;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

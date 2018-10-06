@@ -15,12 +15,8 @@
     <dependency>
     <groupId>com.taotao</groupId>
     <artifactId>taotao-common</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  
-     </dependency>
-  
-  
-  
+    <version>0.0.1-SNAPSHOT</version> 
+     </dependency>  
   </dependencies>
   <modules>
   	<module>taotao-manager-pojo</module>
@@ -37,9 +33,7 @@
 		<port>8080</port>
 		<path>/</path>
 		</configuration>
-		</plugin>
-  
+		</plugin> 
   </plugins>
-  
   </build>
 </project>
