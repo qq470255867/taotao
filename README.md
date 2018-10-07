@@ -13,4 +13,10 @@ A typical B2C e-commerce website and written using the SSM framework.
 18.10.6
 完成了前台页面展示
 完成了从后台数据库添加商品分类
+
+18.10.7
+增加了后台cms系统
+完善了部分功能
+
+---
 持续更新中
