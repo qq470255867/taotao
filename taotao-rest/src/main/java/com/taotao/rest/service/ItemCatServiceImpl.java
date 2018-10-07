@@ -33,7 +33,6 @@ public class ItemCatServiceImpl implements ItemCatService {
 		TbItemCatExample example = new TbItemCatExample();
 		com.taotao.pojo.TbItemCatExample.Criteria criteria = example.createCriteria();
 		criteria.andParentIdEqualTo(parentId);
-
 		List<TbItemCat> list = itemCatMapper.selectByExample(example);
 		List resultList = new ArrayList<>();
 		for (TbItemCat itemCat : list) {

@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [07/Oct/2018:17:50:44 +0800] "GET /rest/itemcat/list HTTP/1.1" 200 41819 http-bio-8081-exec-1 1476
+0:0:0:0:0:0:0:1 - - [07/Oct/2018:17:50:44 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8081-exec-2 6
+0:0:0:0:0:0:0:1 - - [07/Oct/2018:17:51:02 +0800] "GET /rest//list/%7B89%7D HTTP/1.1" 404 949 http-bio-8081-exec-4 15
+0:0:0:0:0:0:0:1 - - [07/Oct/2018:17:51:11 +0800] "GET /rest//list/89 HTTP/1.1" 404 949 http-bio-8081-exec-6 15
+0:0:0:0:0:0:0:1 - - [07/Oct/2018:17:51:13 +0800] "GET /rest//list/89 HTTP/1.1" 404 949 http-bio-8081-exec-7 3
+0:0:0:0:0:0:0:1 - - [07/Oct/2018:17:51:31 +0800] "GET /rest/content/list/89 HTTP/1.1" 200 1032 http-bio-8081-exec-9 51
