@@ -7,4 +7,10 @@ A typical B2C e-commerce website and written using the SSM framework.
 后台框架搭建和整合
 商品规格实现
 
+18.10.4
+后台页面功能基本已全面实现
+
+18.10.6
+完成了前台页面展示
+完成了从后台数据库添加商品分类
 持续更新中
