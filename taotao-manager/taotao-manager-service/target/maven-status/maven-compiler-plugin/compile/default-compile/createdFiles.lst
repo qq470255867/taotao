@@ -1,4 +1,12 @@
 com\taotao\service\ItemCatServiceImpl.class
 com\taotao\service\ItemCatService.class
 com\taotao\service\ItemService.class
+com\taotao\service\ItemParamService.class
+com\taotao\service\ContentCatgoryServiceImpl.class
+com\taotao\service\ContentServiceImpl.class
+com\taotao\service\PictureServiceImpl.class
+com\taotao\service\ContentService.class
+com\taotao\service\PictureService.class
+com\taotao\service\ItemParamServiceImpl.class
+com\taotao\service\ContentCatgoryService.class
 com\taotao\service\ItemServiceImpl.class
