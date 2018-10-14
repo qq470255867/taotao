@@ -61,6 +61,7 @@
 	<div style="padding:5px">
 	    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">提交</a>
 	    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">重置</a>
+	    <a href="http://localhost:8083/search/manager/importall" class="easyui-linkbutton" onclick="clearForm()">存库</a>
 	</div>
 </div>
 <script type="text/javascript">

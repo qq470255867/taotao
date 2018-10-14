@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.search.service.ItemService;
 
+
+
+//请求的url
 @Controller
 @RequestMapping("/manager")
 public class ItemController {
@@ -19,6 +22,8 @@ public class ItemController {
 	@ResponseBody
 	public TaotaoResult importAllItem(){		
 		TaotaoResult result=itemService.importAllItem();
+		
+		result.setMsg("导入solr库成功");
 		return result;
 		
 	}

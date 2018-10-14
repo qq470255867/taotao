@@ -34,7 +34,7 @@ public class SearchServiceImpl implements SearchService {
 		long recordCount =searchResult.getRecordCount();
 		long pageCount = recordCount / rows;
 		
-		if (recordCount %rows>0) {
+		if (recordCount % rows>0) {
 			
 			pageCount++;
 			
