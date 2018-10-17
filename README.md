@@ -21,14 +21,14 @@ A typical B2C e-commerce website and written using the SSM framework.
 18.10.8
 增加了首页大广告获取展示的功能
 
-
-
 18.10.13
 增加了搜索功能
 
 18.10.14
 修复了搜索图片不显示的bug
 
+18.10.17
+商品基础信息现在可以展示了
 
 ---
-持续更新中
+更新到死！
