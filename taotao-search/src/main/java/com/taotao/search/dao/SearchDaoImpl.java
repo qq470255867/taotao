@@ -18,6 +18,7 @@ import com.taotao.search.pojo.SearchResult;
 
 @Repository
 public class SearchDaoImpl implements SearchDao {
+	int 数字;
 
 	@Autowired
 	private SolrServer solrServer;
@@ -65,5 +66,7 @@ public class SearchDaoImpl implements SearchDao {
 		return searchResult;
 
 	}
+	
 
 }
+

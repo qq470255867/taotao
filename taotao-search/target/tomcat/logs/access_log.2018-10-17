@@ -1,0 +1,4 @@
+127.0.0.1 - - [17/Oct/2018:21:45:26 +0800] "GET /search/query?page=1&q=%E4%B8%89%E4%BD%93 HTTP/1.1" 200 4022 http-bio-8083-exec-1 295
+127.0.0.1 - - [17/Oct/2018:21:46:38 +0800] "GET /search/query?page=1&q=%E6%89%8B%E6%9C%BA HTTP/1.1" 200 2554 http-bio-8083-exec-3 22
+127.0.0.1 - - [17/Oct/2018:21:47:47 +0800] "GET /search/query?page=1&q=%E6%89%8B%E6%9C%BA HTTP/1.1" 200 2554 http-bio-8083-exec-5 14
+127.0.0.1 - - [17/Oct/2018:21:48:04 +0800] "GET /search/query?page=1&q=%E4%B8%89%E4%BD%93 HTTP/1.1" 200 4022 http-bio-8083-exec-7 13

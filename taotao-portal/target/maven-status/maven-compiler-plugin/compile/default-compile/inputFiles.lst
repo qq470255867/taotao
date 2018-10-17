@@ -1,5 +1,9 @@
+D:\template\taotao-portal\src\main\java\com\taotao\portal\pojo\ItemInfo.java
+D:\template\taotao-portal\src\main\java\com\taotao\portal\controller\ItemController.java
 D:\template\taotao-portal\src\main\java\com\taotao\portal\pojo\Item.java
 D:\template\taotao-portal\src\main\java\com\taotao\portal\pojo\SearchResult.java
+D:\template\taotao-portal\src\main\java\com\taotao\portal\service\ItemService.java
+D:\template\taotao-portal\src\main\java\com\taotao\portal\service\ItemServiceImpl.java
 D:\template\taotao-portal\src\main\java\com\taotao\portal\service\SearchServiceImpl.java
 D:\template\taotao-portal\src\main\java\com\taotao\portal\service\ContentServiceImpl.java
 D:\template\taotao-portal\src\main\java\com\taotao\portal\controller\IndexController.java

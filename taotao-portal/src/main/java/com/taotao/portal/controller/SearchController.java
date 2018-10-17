@@ -18,7 +18,7 @@ public class SearchController {
 	SearchService searchService;
 
 	@RequestMapping("/search")
-	public String showSearch(@RequestParam("q") String query, @RequestParam(defaultValue = "1") Integer page,
+	public String showPage(@RequestParam("q") String query, @RequestParam(defaultValue = "1") Integer page,
 			Model model) {
 		if (query!=null) {
 			
