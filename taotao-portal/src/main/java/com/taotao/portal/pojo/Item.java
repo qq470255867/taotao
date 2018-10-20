@@ -14,7 +14,7 @@ LEFT JOIN tb_item_cat b ON a.cid = b.id
 */
 public class Item {
 	
-	private String id;
+	private long id;
 	private String title;
 	private String sell_point;
 	private long price;
@@ -22,11 +22,11 @@ public class Item {
 	private String category_name;
 	private String item_desc;
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

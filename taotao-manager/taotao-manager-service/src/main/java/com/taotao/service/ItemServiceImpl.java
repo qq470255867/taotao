@@ -101,7 +101,7 @@ public class ItemServiceImpl implements ItemService {
 	private TaotaoResult insertItemParamItem(long itemId, String itemParam) {
 		// 创建一个pojo
 		TbItemParamItem itemParaItem = new TbItemParamItem();
-		itemParaItem.setId(itemId);
+		itemParaItem.setItemId(itemId);
 		itemParaItem.setParamData(itemParam);
 		itemParaItem.setCreated(new Date());
 		itemParaItem.setUpdated(new Date());

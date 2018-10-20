@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taotao.rest.mapper.SelectCatDao">
+
+	<select id="selectByid" resultType="com.taotao.rest.pojo.CatName"
+		parameterType="java.lang.Long">
+		select
+		t.title title,
+		s.name sonName,
+		p.name faName,
+		g.name graName 		
+		from
+		tb_item_cat s
+		LEFT JOIN tb_item_cat p ON s.parent_id = p.id LEFT JOIN tb_item_cat g on
+		p.parent_id = g.id LEFT JOIN tb_item t ON s.id= t.cid
+		where t.id = #{ItemId} 
+		
+</select>
+</mapper>

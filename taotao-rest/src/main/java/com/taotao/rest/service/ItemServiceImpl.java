@@ -105,51 +105,41 @@ public class ItemServiceImpl implements ItemService {
 	}
 
 	@Override
-	public TaotaoResult getItemParam(long id) {
-
+	public TaotaoResult getItemParam(long itemId) {
+		//添加缓存
 		try {
-			String json = jedisClient.get(REDIS_ITEM_KEY + ":" + id + " :param");
-
+			//添加缓存逻辑
+			//从缓存中取商品信息，商品id对应的信息
+			String json = jedisClient.get(REDIS_ITEM_KEY + ":" + itemId + ":param");
+			//判断是否有值
 			if (!StringUtils.isBlank(json)) {
-
-				TbItemParamItem item = JsonUtils.jsonToPojo(json, TbItemParamItem.class);
-				return TaotaoResult.ok(item);
+				//把json转换成java对象
+				TbItemParamItem paramItem = JsonUtils.jsonToPojo(json, TbItemParamItem.class);
+				return TaotaoResult.ok(paramItem);
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// 先从缓存中取商品信息
-
-		// TODO Auto-generated method stub
+		//根据商品id查询规格参数
+		//设置查询条件
 		TbItemParamItemExample example = new TbItemParamItemExample();
 		Criteria criteria = example.createCriteria();
-		criteria.andItemIdEqualTo(id);
-		
-		List<TbItemParamItem> result = itemParamItem.selectByExampleWithBLOBs(example);
-		
-		if (result!=null && result.size()>0) {
-			
-			TbItemParamItem param = result.get(0);
-			
+		criteria.andItemIdEqualTo(itemId);
+		//执行查询
+		List<TbItemParamItem> list = itemParamItem.selectByExampleWithBLOBs(example);
+		if (list != null && list.size()>0) {
+			TbItemParamItem paramItem = list.get(0);
 			try {
-				jedisClient.set(REDIS_ITEM_KEY + ":" + id + " :param", JsonUtils.objectToJson(param));
-				
-				jedisClient.expire(REDIS_ITEM_KEY + ":" + id + " :param", REDIS_ITEM_EXPIRE);
-				
+				//把商品信息写入缓存
+				jedisClient.set(REDIS_ITEM_KEY + ":" + itemId + ":param", JsonUtils.objectToJson(paramItem));
+				//设置key的有效期
+				jedisClient.expire(REDIS_ITEM_KEY + ":" + itemId + ":param", REDIS_ITEM_EXPIRE);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			return TaotaoResult.ok(param);
-			
-		}else {
-			return TaotaoResult.build(400, "查无此信息");
+			return TaotaoResult.ok(paramItem);
 		}
-		
-		
-		// 没有则从数据库添加进缓存
-
-
+		return TaotaoResult.build(400, "无此商品规格");
 	}
 
 }

@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [20/Oct/2018:22:18:34 +0800] "GET /user/check/1/phone HTTP/1.1" 400 968 http-bio-8084-exec-1 68
+0:0:0:0:0:0:0:1 - - [20/Oct/2018:22:18:34 +0800] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8084-exec-2 2
+0:0:0:0:0:0:0:1 - - [20/Oct/2018:22:18:58 +0800] "GET /user/check/1/username HTTP/1.1" 400 968 http-bio-8084-exec-4 21
+0:0:0:0:0:0:0:1 - - [20/Oct/2018:22:19:01 +0800] "GET /user/check/1/username HTTP/1.1" 400 968 http-bio-8084-exec-5 12
+0:0:0:0:0:0:0:1 - - [20/Oct/2018:22:19:44 +0800] "GET /user/check/username/1 HTTP/1.1" 200 48 http-bio-8084-exec-8 604
+0:0:0:0:0:0:0:1 - - [20/Oct/2018:22:19:56 +0800] "GET /user/check/zhangsan/1 HTTP/1.1" 200 49 http-bio-8084-exec-2 25
+0:0:0:0:0:0:0:1 - - [20/Oct/2018:22:20:06 +0800] "GET /user/check/%20/1 HTTP/1.1" 404 949 http-bio-8084-exec-4 3
+0:0:0:0:0:0:0:1 - - [20/Oct/2018:22:20:12 +0800] "GET /user/check/hehe/1 HTTP/1.1" 200 48 http-bio-8084-exec-4 12

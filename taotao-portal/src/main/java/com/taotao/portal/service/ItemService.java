@@ -10,6 +10,6 @@ public interface ItemService {
 	
 	public TbItemDesc geTbItemDesc(long id);
 	
-	public TbItemParamItem geTbItemParamItem(long id);
+	public TbItemParamItem getItemParam(Long id);
 
 }

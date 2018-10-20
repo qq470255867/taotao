@@ -1,6 +1,7 @@
  /*
  Date: 2014-09-25 3:59:11 [PM] 
  */
+
 function StringBuilder() {
     this.strings = new Array, this.length = 0
 }
@@ -1183,7 +1184,7 @@ var category = {OBJ: $("#_JD_ALLSORT"),
 	            case 2:
 	                c = b.split("|")[0], d = b.split("|")[1]
 	        }
-        return "" == c ? d : (/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-.\/?%&=]*)?$/.test(c) || (c = c.replace(/-000$/, ""), c = c.match(/^\d*-\d*$/) ? "http://channel.jd.com/" + c + ".html" : "http://www.taotao.com" + c + ".html"), '<a href="' + c + '">' + d + "</a>")
+        return "" == c ? d : (/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-.\/?%&=]*)?$/.test(c) || (c = c.replace(/-000$/, ""), c = c.match(/^\d*-\d*$/) ? "" + c + "" : "" + c + ""), '<a href="' + c + '">' + d + "</a>")
     },FN_SetLink: function(a) {
         var b = "", c = pageConfig.isHome ? 'clstag="homepage|keycount|home2013|0604e"' : "", d = pageConfig.isHome ? 'clstag="homepage|keycount|home2013|0603e"' : "", e = pageConfig.isHome ? 'clstag="homepage|keycount|home2013|0605e"' : "";
         switch (a) {
@@ -1210,7 +1211,7 @@ var category = {OBJ: $("#_JD_ALLSORT"),
     		category.getDataService(json);
     	});*/
     },FN_GetBrands: function() {
-      //  $.getJSONP(this.URL_BrandsServ, category.getBrandService)
+       // $.getJSONP(this.URL_BrandsServ, category.getBrandService)
     },FN_RefactorJSON: function(a, b) {
         for (var c = a.length / b, d = [], e = 0; c > e; e++)
             d.push({tabs: [],increment: null,count: b,skuids: []});
@@ -1595,3 +1596,4 @@ pageConfig.FN_InitSidebar = function() {
         Contrast && Contrast.init(c, a)
     }), pageConfig.isInitContrast = 1, void 0)
 };
+

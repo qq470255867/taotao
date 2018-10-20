@@ -45,7 +45,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 				} else {
 					catNode.setName(itemCat.getName());
 				}
-				catNode.setUrl("/products/" + itemCat.getId() + ".html");
+				catNode.setUrl("/products/" + itemCat.getId() +".html");
 				catNode.setItem(getCatList(itemCat.getId()));
 
 				resultList.add(catNode);

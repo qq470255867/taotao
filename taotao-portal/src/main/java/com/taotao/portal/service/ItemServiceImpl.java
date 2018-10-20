@@ -1,11 +1,15 @@
 package com.taotao.portal.service;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.alibaba.druid.sql.ast.expr.SQLCaseExpr.Item;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.common.utils.HttpClientUtil;
-import com.taotao.pojo.TbItem;
+import com.taotao.common.utils.JsonUtils;
 import com.taotao.pojo.TbItemDesc;
 import com.taotao.pojo.TbItemParamItem;
 import com.taotao.portal.pojo.ItemInfo;
@@ -37,14 +41,52 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public TbItemDesc geTbItemDesc(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		String result = HttpClientUtil.doGet(REST_BASE_URL + "/itemDesc/" + id);
+
+		TaotaoResult formatToPojo = TaotaoResult.formatToPojo(result, TbItemDesc.class);
+
+		TbItemDesc data = (TbItemDesc) formatToPojo.getData();
+
+		return data;
 	}
 
 	@Override
-	public TbItemParamItem geTbItemParamItem(long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public TbItemParamItem getItemParam(Long itemId) {
 
+		String json = HttpClientUtil.doGet(REST_BASE_URL + "/itemParam/" + itemId);
+
+		TaotaoResult result = TaotaoResult.formatToPojo(json, TbItemParamItem.class);
+
+		TbItemParamItem itemParam = (TbItemParamItem) result.getData();
+		
+		try {
+			
+			List<Map> jsonList = JsonUtils.jsonToList(itemParam.getParamData(), Map.class);
+			
+			StringBuffer sb = new StringBuffer();
+			sb.append("<table cellpadding=\"0\" cellspacing=\"1\" width=\"100%\" border=\"0\" class=\"Ptable\">\n");
+			sb.append("    <tbody>\n");
+			for (Map m1 : jsonList) {
+				sb.append("        <tr>\n");
+				sb.append("            <th class=\"tdTitle\" colspan=\"2\">" + m1.get("group") + "</th>\n");
+				sb.append("        </tr>\n");
+				List<Map> list2 = (List<Map>) m1.get("params");
+				for (Map m2 : list2) {
+					sb.append("        <tr>\n");
+					sb.append("            <td class=\"tdTitle\">" + m2.get("k") + "</td>\n");
+					sb.append("            <td>" + m2.get("v") + "</td>\n");
+					sb.append("        </tr>\n");
+				}
+			}
+			sb.append("    </tbody>\n");
+			sb.append("</table>");
+			
+			itemParam.setParamData(sb.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return itemParam;
+
+	}
 }
