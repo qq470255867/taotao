@@ -30,8 +30,12 @@ A typical B2C e-commerce website and written using the SSM framework.
 18.10.17
 商品基础信息现在可以展示了
 
-18.10.21
+18.10.20
 增加了搜索展示分类，通过分类id查询商品列表
+
+18.10.21
+
+增加了用户注册和登录功能
 
 ---
 更新到死！
