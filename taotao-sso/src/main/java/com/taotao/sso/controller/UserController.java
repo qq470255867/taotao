@@ -6,9 +6,11 @@ import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.taotao.common.pojo.TaotaoResult;
+import com.taotao.common.utils.ExceptionUtil;
 import com.taotao.pojo.TbUser;
 import com.taotao.sso.service.UserService;
 
@@ -64,20 +66,62 @@ public class UserController {
 			return result;
 		}
 	}
-	
-	@RequestMapping("/register")
+
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	@ResponseBody
-	public TaotaoResult createUser(TbUser user){
-		
+	public TaotaoResult createUser(TbUser user) {
+
 		try {
 			TaotaoResult result = userService.createUser(user);
-			
+
 			return result;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return TaotaoResult.build(500, "用户创建失败");
-		
+
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@ResponseBody
+	public TaotaoResult userLogin(String username, String password) {
+		try {
+			TaotaoResult result = userService.UserLogin(username, password);
+			return result;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaotaoResult.build(400, ExceptionUtil.getStackTrace(e));
+		}
+
+	}
+
+	@RequestMapping("/token/{token}")
+	@ResponseBody
+	public Object getUserByToken(@PathVariable String token, String callback) {
+
+		TaotaoResult result = null;
+
+		try {
+			result = userService.getUserByToken(token);
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			result = TaotaoResult.build(500, "异常已捕获");
+		}
+
+		if (StringUtils.isBlank(callback)) {
+
+			return result;
+
+		} else {
+			MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
+
+			mappingJacksonValue.setJsonpFunction(callback);
+
+			return mappingJacksonValue;
+		}
+
 	}
 
 }

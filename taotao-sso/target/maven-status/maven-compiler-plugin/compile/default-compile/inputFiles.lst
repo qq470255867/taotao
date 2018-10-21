@@ -1,6 +1,7 @@
 D:\template\taotao-sso\src\main\java\com\taotao\sso\service\UserService.java
 D:\template\taotao-sso\src\main\java\com\taotao\sso\dao\JedisClientCluster.java
 D:\template\taotao-sso\src\main\java\com\taotao\sso\service\UserServiceImpl.java
-D:\template\taotao-sso\src\main\java\com\taotao\sso\dao\JedisClient.java
+D:\template\taotao-sso\src\main\java\com\taotao\sso\controller\PageController.java
 D:\template\taotao-sso\src\main\java\com\taotao\sso\dao\JedisClientSingle.java
+D:\template\taotao-sso\src\main\java\com\taotao\sso\dao\JedisClient.java
 D:\template\taotao-sso\src\main\java\com\taotao\sso\controller\UserController.java
