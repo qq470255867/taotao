@@ -21,6 +21,7 @@ public class Item {
 	private String image;
 	private String category_name;
 	private String item_desc;
+	
 
 	public long getId() {
 		return id;
@@ -86,5 +87,7 @@ public class Item {
 		}
 		return null;
 	}
+
+	
 
 }

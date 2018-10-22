@@ -31,10 +31,19 @@ public class CatSelectResult {
 	public void setRecordCount(long recordCount) {
 		this.recordCount = recordCount;
 	}
+
+	public String getMsg() {
+		return msg;
+	}
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+
 	private List<Item> list;
 	private long pageCount;
 	private long curPage;
 	private long recordCount;
+	private String msg;
 
 
 }

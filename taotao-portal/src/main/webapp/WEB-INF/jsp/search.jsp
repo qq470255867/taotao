@@ -41,6 +41,7 @@
 <div class="m psearch " id="plist">
 <ul class="list-h clearfix" tpl="2">
 <c:forEach items="${itemList}" var="item">
+${msg}
 <li class="item-book" bookid="11078102">
 	<div class="p-img">
 		<a target="_blank" href="/item/${item.id }.html">
