@@ -34,8 +34,10 @@ A typical B2C e-commerce website and written using the SSM framework.
 增加了搜索展示分类，通过分类id查询商品列表
 
 18.10.21
-
 增加了用户注册和登录功能
+
+18.10.22
+分类查询的商品可以分页展示了，增加了后台的跳转，没有登录的用户 访问商品详情会跳转登录
 
 ---
 更新到死！
