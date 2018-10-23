@@ -1,5 +1,6 @@
-# taotao
+# icycraft
 A typical B2C e-commerce website and written using the SSM framework.
+---
 
 2018/10/4
 首次提交向github
