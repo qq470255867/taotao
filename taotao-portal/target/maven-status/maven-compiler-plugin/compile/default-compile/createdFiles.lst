@@ -1,9 +1,13 @@
+com\taotao\portal\controller\ItemCartController.class
 com\taotao\portal\pojo\TbItem.class
 com\taotao\portal\pojo\CatName.class
+com\taotao\portal\controller\OrderController.class
 com\taotao\portal\service\ContentServiceImpl.class
 com\taotao\portal\service\CatItemListServiceImpl.class
+com\taotao\portal\service\CartService.class
 com\taotao\portal\service\ItemService.class
 com\taotao\portal\pojo\ItemInfo.class
+com\taotao\portal\service\CartServiceImpl.class
 com\taotao\portal\service\CatItemListService.class
 com\taotao\portal\service\CatService.class
 com\taotao\portal\pojo\SearchResult.class
@@ -14,10 +18,11 @@ com\taotao\portal\pojo\CatSelectResult.class
 com\taotao\portal\service\CatServiceImpl.class
 com\taotao\portal\controller\IndexController.class
 com\taotao\portal\service\ContentService.class
-com\taotao\portal\pojo\Item.class
-com\taotao\portal\service\SearchService.class
 com\taotao\portal\service\UserService.class
+com\taotao\portal\service\SearchService.class
+com\taotao\portal\pojo\Item.class
 com\taotao\portal\service\ItemServiceImpl.class
 com\taotao\portal\controller\CatItemListController.class
 com\taotao\portal\service\SearchServiceImpl.class
+com\taotao\portal\pojo\CartItem.class
 com\taotao\portal\service\UserServiceImpl.class
