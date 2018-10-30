@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:39:59 +0800] "GET /cart/cart.html HTTP/1.1" 200 18272 http-bio-8082-exec-1 1268
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:39:59 +0800] "GET /images/taotao-logo.gif HTTP/1.1" 200 6060 http-bio-8082-exec-2 4
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:39:59 +0800] "GET /images/btn-check-20140627.png HTTP/1.1" 200 6940 http-bio-8082-exec-3 3
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:39:59 +0800] "GET /images/20130725.png HTTP/1.1" 200 275 http-bio-8082-exec-7 2
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:39:59 +0800] "GET /images/20130330A_2.png HTTP/1.1" 200 8252 http-bio-8082-exec-6 3
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:39:59 +0800] "GET /images/step1.png HTTP/1.1" 200 739 http-bio-8082-exec-4 4
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:39:59 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8082-exec-10 3
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:40:01 +0800] "POST /cart/add/1058620853.html?num=1 HTTP/1.1" 302 - http-bio-8082-exec-10 52
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:40:01 +0800] "GET /cart/success.html HTTP/1.1" 200 18334 http-bio-8082-exec-10 75
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:40:02 +0800] "POST /cart/add/1058620853.html?num=1 HTTP/1.1" 302 - http-bio-8082-exec-10 7
+0:0:0:0:0:0:0:1 - - [28/Oct/2018:13:40:02 +0800] "GET /cart/success.html HTTP/1.1" 200 18334 http-bio-8082-exec-10 9
