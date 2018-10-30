@@ -43,5 +43,8 @@ A typical B2C e-commerce website and written using the SSM framework.
 18.10.23
 增加了购物车模块
 
+18.10.30
+订单模块完成，项目进入上线阶段
+
 ---
 更新到死！
